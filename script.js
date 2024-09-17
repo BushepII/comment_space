@@ -28,6 +28,7 @@ function onClick(){
 
         createComment(firstName, lastName, message);
 
+        //Empty the fields
         firstName.value = "";
         lastName.value = "";
         message.value = "";
@@ -55,6 +56,7 @@ function appendChildren(parent, children){
     children.forEach(child => parent.appendChild(child));
 }
 
+//Main function to create the comment space
 function createComment(firstName, lastName, message){
 
     let firstDiv = createElementWithClass("div", "flex space-x-4 text-sm text-gray-500");
