@@ -13,11 +13,21 @@ function onClick(){
 
     if (isEmpty(firstName.value) || isEmpty(lastName.value) || isEmpty(message.value)){
         alertMessage();
+    } else {
+        hideAlertMessage();
+
+        firstName.value = "";
+        lastName.value = "";
+        message.value = "";
     }
 }
 
 function alertMessage(){
     alert.style.display = "inline";
+}
+
+function hideAlertMessage(){
+    alert.style.display = "none";
 }
 
 function isEmpty(object){
